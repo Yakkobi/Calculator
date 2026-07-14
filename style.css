@@ -40,3 +40,30 @@ body {
     background-position: 200% center;
   }
 }
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 55vh;
+}
+
+#calculatorBody {
+  display: flex;
+  align-items: center;
+  background: rgb(131, 4, 194);
+
+  position: relative;
+  width: 366px;
+  height: 461px;
+  background: #7f00ffff;
+  border: 6px solid #9d38e3ff;
+  border-start-start-radius: 30px;
+  border-start-end-radius: 30px;
+  border-end-start-radius: 30px;
+  border-end-end-radius: 30px;
+  overflow: hidden;
+  z-index: 0;
+}
