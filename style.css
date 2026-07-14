@@ -1,35 +1,37 @@
-/* this trick edits the page header so that the text is rainbow */
-#pageHheader {
-  .rainbow-text-animated {
-    background-image: linear-gradient(
-      to right,
-      red,
-      orange,
-      yellow,
-      green,
-      blue,
-      indigo,
-      violet,
-      red
-    );
+body {
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  min-height: 100vh;
+}
 
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    display: inline-block;
+#pageHeader h2 {
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  background-size: 200% auto;
+  animation: shift-rainbow 4s linear infinite;
+  margin: 0;
+}
 
-    background-size: 200% auto;
-
-    animation: shift-rainbow 4s linear infinite;
+@keyframes shift-rainbow {
+  0% {
+    background-position: 0% center;
   }
-
-  @keyframes shift-rainbow {
-    0% {
-      background-position: 0% center;
-    }
-    100% {
-      background-position: 200% center;
-    }
+  100% {
+    background-position: 200% center;
   }
 }
