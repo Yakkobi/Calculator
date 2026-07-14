@@ -6,6 +6,11 @@ body {
 }
 
 #pageHeader h2 {
+  text-align: center;
+  width: 100%;
+  padding-top: 40px;
+
+  /* this trick makes the text rainbow */
   background-image: linear-gradient(
     to right,
     red,
