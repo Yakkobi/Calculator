@@ -1,16 +1,24 @@
 body {
+  margin: 0;
+  padding: 0;
   background-color: #000000;
   color: #ffffff;
-  margin: 0;
+  font-family: sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   min-height: 100vh;
+  padding-top: 40px;
+}
+
+#pageHeader {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 #pageHeader h2 {
-  text-align: center;
-  width: 100%;
-  padding-top: 40px;
-
-  /* this trick makes the text rainbow */
   background-image: linear-gradient(
     to right,
     red,
@@ -30,6 +38,25 @@ body {
   background-size: 200% auto;
   animation: shift-rainbow 4s linear infinite;
   margin: 0;
+  font-size: 38px;
+}
+
+#calculator {
+  display: flex;
+  justify-content: center;
+}
+
+#calculatorBody {
+  display: flex;
+  flex-direction: column;
+  background: #7f00ffff;
+  width: 366px;
+  height: 461px;
+  border: 6px solid #9d38e3ff;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
 }
 
 @keyframes shift-rainbow {
@@ -39,31 +66,4 @@ body {
   100% {
     background-position: 200% center;
   }
-}
-
-#calculator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  min-height: 55vh;
-}
-
-#calculatorBody {
-  display: flex;
-  align-items: center;
-  background: rgb(131, 4, 194);
-
-  position: relative;
-  width: 366px;
-  height: 461px;
-  background: #7f00ffff;
-  border: 6px solid #9d38e3ff;
-  border-start-start-radius: 30px;
-  border-start-end-radius: 30px;
-  border-end-start-radius: 30px;
-  border-end-end-radius: 30px;
-  overflow: hidden;
-  z-index: 0;
 }
