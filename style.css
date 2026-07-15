@@ -54,7 +54,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Outer shell: purple gradient, rounded, glowing double-ring border */
 .calcBody {
   position: relative;
   width: 366px;
@@ -73,7 +72,6 @@ body {
     0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Inner glassy face panel */
 .calcFace {
   position: absolute;
   left: 16px;
@@ -85,7 +83,6 @@ body {
   box-shadow: 4px 4px 8px rgba(125, 38, 174, 0.35);
 }
 
-/* Screen */
 .screen {
   position: absolute;
   left: 36px;
@@ -106,7 +103,6 @@ body {
   overflow: hidden;
 }
 
-/* Shared button look: translucent magenta glass */
 .btn {
   position: absolute;
   border: none;
