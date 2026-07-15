@@ -2,23 +2,159 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="pageHeader">
-      <h2>Tiny-ulator!</h2>
-    </div>
+    <div class="calcBody">
+      <div class="calcFace">
+        <div class="screen">0</div>
 
-    <div id="calculator">
-      <div id="calculatorBody">
-        <div id="calculatorFace">
-          <div id="calculatorScreen"></div>
-          <div id="calculatorButtons"></div>
-        </div>
+        <button
+          class="btn number"
+          data-value="1"
+          style="left: 21px; top: 135px"
+        >
+          1
+        </button>
+
+        <button
+          class="btn number"
+          data-value="2"
+          style="left: 87px; top: 135px"
+        >
+          2
+        </button>
+
+        <button
+          class="btn number"
+          data-value="3"
+          style="left: 154px; top: 135px"
+        >
+          3
+        </button>
+
+        <button
+          class="btn number"
+          data-value="4"
+          style="left: 21px; top: 208px"
+        >
+          4
+        </button>
+
+        <button
+          class="btn number"
+          data-value="5"
+          style="left: 87px; top: 208px"
+        >
+          5
+        </button>
+
+        <button
+          class="btn number"
+          data-value="6"
+          style="left: 154px; top: 208px"
+        >
+          6
+        </button>
+
+        <button
+          class="btn number"
+          data-value="7"
+          style="left: 21px; top: 278px"
+        >
+          7
+        </button>
+
+        <button
+          class="btn number"
+          data-value="8"
+          style="left: 87px; top: 278px"
+        >
+          8
+        </button>
+
+        <button
+          class="btn number"
+          data-value="9"
+          style="left: 154px; top: 278px"
+        >
+          9
+        </button>
+
+        <button class="btn zero" data-value="0" style="left: 21px; top: 349px">
+          0
+        </button>
+
+        <button
+          class="btn decimal"
+          data-value="."
+          style="left: 154px; top: 349px"
+        >
+          .
+        </button>
+
+        <button
+          class="btn equal"
+          data-value="="
+          style="left: 240.4px; top: 349px"
+        >
+          =
+        </button>
+
+        <button
+          class="btn clear"
+          data-action="clear"
+          style="left: 239.4px; top: 135px"
+        >
+          CE
+        </button>
+
+        <button
+          class="btn back"
+          data-action="back"
+          style="left: 290.3px; top: 135px"
+        >
+          &lt;-
+        </button>
+
+        <button
+          class="btn operator"
+          data-value="+"
+          style="left: 233.5px; top: 237.5px"
+        >
+          +
+        </button>
+
+        <button
+          class="btn operator"
+          data-value="-"
+          style="left: 284.5px; top: 237.5px"
+        >
+          -
+        </button>
+
+        <button
+          class="btn operator"
+          data-value="*"
+          style="left: 233.5px; top: 290.5px"
+        >
+          x
+        </button>
+
+        <button
+          class="btn operator"
+          data-value="%"
+          style="left: 284.5px; top: 290.5px"
+        >
+          %
+        </button>
       </div>
     </div>
   </body>
-  <link src="script.js" />
 </html>
