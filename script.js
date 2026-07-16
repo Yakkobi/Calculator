@@ -21,7 +21,7 @@ function calculator() {
     0: 0,
 
     clear: "clear",
-    back: "backspace",
+    back: "back",
     "+": "add",
     "-": "subtract",
     "*": "multiply",
@@ -58,6 +58,11 @@ variable become true if it is */
       previousValue = null;
       operator = null;
       screen.textContent = "0";
+    }
+
+    if (rawPressedValue === "back") {
+      currentInput = currentInput.slice(0, -1);
+      screen.textContent = currentInput;
     }
   });
 });
