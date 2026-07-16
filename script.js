@@ -2,6 +2,10 @@ const btn = document.querySelectorAll(".btn");
 const screen = document.querySelector(".screen");
 const returnCalcValue = calculator();
 
+let currentInput = "";
+let previousValue = null;
+let operator = null;
+
 function calculator() {
   return {
     1: 1,
@@ -41,3 +45,15 @@ btn.forEach((buttonValue) => {
     console.log(calculator.firstValue);
   });
 });
+
+function operate(operator, a, b) {
+  if (operator === "add") {
+    return a + b;
+  } else if (operator === "subtract") {
+    return a - b;
+  } else if (operator === "multiply") {
+    return a * b;
+  } else if (operator === "divide") {
+    return a / b;
+  }
+}
