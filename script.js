@@ -1,7 +1,7 @@
-const buttons = document.querySelectorAll(".btn");
-const changeOutput = document.querySelector(".screen");
+const btn = document.querySelectorAll(".btn");
+const screen = document.querySelector(".screen");
 
-function screenValues() {
+function calculator() {
   return {
     1: 1,
     2: 2,
@@ -24,20 +24,21 @@ function screenValues() {
   };
 }
 
-buttons.forEach((button) => {
-  button.addEventListener("click", function (i) {
-    const rawPressedValue = i.target.dataset.value || i.target.dataset.action;
+btn.forEach((buttonValue) => {
+  buttonValue.addEventListener("click", function (buttonPressed) {
+    const rawPressedValue =
+      buttonPressed.target.dataset.value || buttonPressed.target.dataset.action;
 
-    const mapping = screenValues();
+    const mapping = calculator();
 
     const mappedValue = mapping[rawPressedValue];
 
-    screenValues.firstValue = mappedValue;
+    calculator.firstValue = mappedValue;
 
-    if (screenValues.firstValue !== undefined) {
-      changeOutput.textContent = screenValues.firstValue;
+    if (calculator.firstValue !== undefined) {
+      screen.textContent = calculator.firstValue;
     }
 
-    console.log(screenValues.firstValue);
+    console.log(calculator.firstValue);
   });
 });
