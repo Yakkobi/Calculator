@@ -1,5 +1,6 @@
 const btn = document.querySelectorAll(".btn");
 const screen = document.querySelector(".screen");
+const returnCalcValue = calculator();
 
 function calculator() {
   return {
@@ -29,9 +30,7 @@ btn.forEach((buttonValue) => {
     const rawPressedValue =
       buttonPressed.target.dataset.value || buttonPressed.target.dataset.action;
 
-    const mapping = calculator();
-
-    const mappedValue = mapping[rawPressedValue];
+    const mappedValue = returnCalcValue[rawPressedValue];
 
     calculator.firstValue = mappedValue;
 
