@@ -1,14 +1,18 @@
 const buttons = document.querySelectorAll(".btn");
-const screen = {
+const changeOutput = document.querySelector(".screen");
+const screenState = {
   firstValue: null,
   secondValue: null,
   thirdValue: null,
 };
 
-/* returns the value for the button pressed (the values are in the HTML file) */
 buttons.forEach((button) => {
   button.addEventListener("click", function (i) {
-    screen.firstValue = i.target.dataset.value;
-    console.log(screen.firstValue);
+    screenState.firstValue = i.target.dataset.value;
+    if (screenState.firstValue !== undefined) {
+      changeOutput.textContent = screenState.firstValue;
+    }
+
+    console.log(screenState.firstValue);
   });
 });
