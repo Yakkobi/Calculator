@@ -53,7 +53,12 @@ variable become true if it is */
       screen.textContent = currentInput;
     }
 
-    console.log(calculator.firstValue);
+    if (rawPressedValue === "clear") {
+      currentInput = "";
+      previousValue = null;
+      operator = null;
+      screen.textContent = "0";
+    }
   });
 });
 
