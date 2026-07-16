@@ -42,10 +42,15 @@ btn.forEach((buttonValue) => {
     /* Adds the "firstValue" property to the calculator function */
     calculator.firstValue = mappedValue;
 
-    /* If the calculator.firstValue property in NOT undefined, it changes
-the screen to match the firstValue property via the textContent DOM property */
-    if (calculator.firstValue !== undefined) {
-      screen.textContent = calculator.firstValue;
+    /* Checks if the rawPressedValue is a digit, and makes the "isDigit"
+variable become true if it is */
+    const digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let isDigit = digits.includes(rawPressedValue);
+    /* If the isDigit variable is true, then it adds the current
+    number(s) on the screen to whatever rawPressedValue is entered next */
+    if (isDigit) {
+      currentInput = currentInput + rawPressedValue;
+      screen.textContent = currentInput;
     }
 
     console.log(calculator.firstValue);
