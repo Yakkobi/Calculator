@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll(".btn");
 const changeOutput = document.querySelector(".screen");
 
-function changeScreenState() {
+function screenValues() {
   return {
     1: 1,
     2: 2,
@@ -26,11 +26,18 @@ function changeScreenState() {
 
 buttons.forEach((button) => {
   button.addEventListener("click", function (i) {
-    screenState.firstValue = i.target.dataset.value;
-    if (screenState.firstValue !== undefined) {
-      changeOutput.textContent = screenState.firstValue;
+    const rawPressedValue = i.target.dataset.value || i.target.dataset.action;
+
+    const mapping = screenValues();
+
+    const mappedValue = mapping[rawPressedValue];
+
+    screenValues.firstValue = mappedValue;
+
+    if (screenValues.firstValue !== undefined) {
+      changeOutput.textContent = screenValues.firstValue;
     }
 
-    console.log(screenState.firstValue);
+    console.log(screenValues.firstValue);
   });
 });
