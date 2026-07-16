@@ -14,8 +14,8 @@ function screenValues() {
     9: 9,
     0: 0,
 
-    CE: "clear",
-    "<-": "backspace",
+    clear: "clear",
+    back: "backspace",
     "+": "add",
     "-": "subtract",
     "*": "multiply",
