@@ -57,12 +57,21 @@ variable become true if it is */
       currentInput = "";
       previousValue = null;
       operator = null;
-      screen.textContent = " ";
+      screen.textContent = "";
     }
 
     if (rawPressedValue === "back") {
       currentInput = currentInput.slice(0, -1);
       screen.textContent = currentInput;
+    }
+
+    const operatorSymbol = ["add", "subtract", "multiply", "divide"];
+    let isOperatorSymbol = operatorSymbol.includes(mappedValue);
+
+    if (isOperatorSymbol) {
+      previousValue = currentInput;
+      currentInput = "";
+      operator = mappedValue;
     }
   });
 });
