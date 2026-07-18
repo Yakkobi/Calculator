@@ -72,6 +72,7 @@ variable become true if it is */
       previousValue = currentInput;
       currentInput = "";
       operator = mappedValue;
+      screen.textContent = "";
     }
   });
 });
