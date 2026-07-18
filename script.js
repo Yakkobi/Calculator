@@ -57,7 +57,7 @@ variable become true if it is */
       currentInput = "";
       previousValue = null;
       operator = null;
-      screen.textContent = "0";
+      screen.textContent = " ";
     }
 
     if (rawPressedValue === "back") {
