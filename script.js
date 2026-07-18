@@ -74,18 +74,33 @@ variable become true if it is */
       operator = mappedValue;
       screen.textContent = "";
     }
+
+    const equalSymbol = "equal";
+    let equalSymbolPressed = mappedValue === "equal";
+
+    if (equalSymbolPressed) {
+      let result = operate(
+        operator,
+        parseFloat(previousValue),
+        parseFloat(currentInput),
+      );
+      currentInput = result;
+      previousValue = null;
+      operator = null;
+      screen.textContent = currentInput;
+    }
   });
 });
 
 /* The "operate" function used for the actual calculation method */
-function operate(operator, a, b) {
+function operate(operator, currentInput, previousValue) {
   if (operator === "add") {
-    return a + b;
+    return previousValue + currentInput;
   } else if (operator === "subtract") {
-    return a - b;
+    return currentInput - previousValue;
   } else if (operator === "multiply") {
-    return a * b;
+    return previousValue * currentInput;
   } else if (operator === "divide") {
-    return a / b;
+    return currentInput / previousValue;
   }
 }
